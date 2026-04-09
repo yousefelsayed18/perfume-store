@@ -310,7 +310,7 @@
 }
 /* Header */
 header{
-    background-image: url('../public/images/category_women.png');
+    background-image: url('../public/images/cover.webp');
     background-position: center center;
     background-size: cover;
     height: 100vh;

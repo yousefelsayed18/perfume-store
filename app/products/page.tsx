@@ -91,18 +91,7 @@ export default function Products() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <button
-                    onClick={(e) => handleAddToCart(e, product)}
-                    disabled={cartLoadingId === product.id}
-                    className="absolute bottom-3 right-3 bg-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition shadow"
-                  >
-                    <ShoppingCart
-                      size={16}
-                      className={
-                        addedId === product.id ? "text-green-500" : "text-black"
-                      }
-                    />
-                  </button>
+
                   {addedId === product.id && (
                     <div className="absolute bottom-3 left-3 bg-black text-white text-xs px-3 py-1 rounded-full">
                       Added!

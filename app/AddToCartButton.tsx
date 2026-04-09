@@ -4,8 +4,10 @@
 import { useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import { addToCart } from "@/app/services/services";
+import { useCart } from "./Context/CartContext";
 
 export default function AddToCartButton({ product }: { product: any }) {
+   const { fetchCartCount } = useCart();
   const [loading, setLoading] = useState(false);
   const [added, setAdded] = useState(false);
 
@@ -14,6 +16,7 @@ export default function AddToCartButton({ product }: { product: any }) {
     const { error } = await addToCart(product.id);
     if (!error) {
       setAdded(true);
+       await fetchCartCount();
       setTimeout(() => setAdded(false), 2000);
     }
     setLoading(false);

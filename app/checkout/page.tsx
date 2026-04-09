@@ -143,7 +143,7 @@ export default function CheckoutPage() {
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
       {/* Left - Form */}
       <div className="bg-[#1e2d3d] text-white p-10 lg:p-16 space-y-8">
-        <h1 className="text-2xl font-bold tracking-widest text-center">ELDORA</h1>
+        <h1 className="text-2xl font-bold tracking-widest text-center">Store</h1>
 
         {/* Contact */}
         <div>
@@ -202,8 +202,8 @@ export default function CheckoutPage() {
                 {/* ✅ Instapay Info */}
                 {paymentMethod === "instapay" && method.id === "instapay" && (
                   <div className="px-4 py-4 bg-[#243345] text-sm space-y-2 text-gray-200">
-                    <p>Please make your payment to the following number : 📲 <span className="font-semibold text-white">01068511331</span></p>
-                    <p>After completing the payment, kindly send a photo of the payment receipt by sending a whatsapp to 📩 <span className="font-semibold text-white">01011756110</span></p>
+                    <p>Please make your payment to the following number : 📲 <span className="font-semibold text-white">01000000000</span></p>
+                    <p>After completing the payment, kindly send a photo of the payment receipt by sending a whatsapp to 📩 <span className="font-semibold text-white">0101111111</span></p>
                     <p className="mt-2 text-yellow-300">Important Notice ⚠️</p>
                     <p className="text-gray-300">Your order will not be confirmed or shipped until we receive a valid payment receipt at the number above.</p>
                   </div>
@@ -212,8 +212,8 @@ export default function CheckoutPage() {
                 {/* ✅ V-Cash Info */}
                 {paymentMethod === "vcash" && method.id === "vcash" && (
                   <div className="px-4 py-4 bg-[#243345] text-sm space-y-2 text-gray-200">
-                    <p>Please make your payment to the following number : 📲 <span className="font-semibold text-white">01011756110</span></p>
-                    <p>After completing the payment, kindly send a photo of the payment receipt by sending a whatsapp to 📩 <span className="font-semibold text-white">01011756110</span></p>
+                    <p>Please make your payment to the following number : 📲 <span className="font-semibold text-white">010444444444</span></p>
+                    <p>After completing the payment, kindly send a photo of the payment receipt by sending a whatsapp to 📩 <span className="font-semibold text-white">01033333333</span></p>
                     <p className="mt-2 text-yellow-300">Important Notice ⚠️</p>
                     <p className="text-gray-300">Your order will not be confirmed or shipped until we receive a valid payment receipt at the number above.</p>
                   </div>

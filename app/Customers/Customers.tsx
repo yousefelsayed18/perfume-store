@@ -20,56 +20,56 @@ const products: Product[] = [
     brand: "STRONGER WITH YOU INTENSELY",
     name: "Toffee Crush",
     price: 480,
-    longevity: "8+ hours",
-    image: "/images/1.png",  // ✅
+    longevity: "💕تحفة جدا بجد",
+    image: "/images/1.jpg", // ✅
   },
   {
     id: 2,
     brand: "ALTHAÏR (PARFUMS DE MARLY)",
     name: "Althaïr Royal Essence",
     price: 750,
-    longevity: "12+ hours",
-    image: "/images/2.jpg",  // ✅
+    longevity: "دا احلى برفان جربته في حياتي وااو بجد❤️",
+    image: "/images/zara.jpg", // ✅
   },
   {
     id: 3,
     brand: "LE MALE LE PARFUM",
     name: "Le Noir Éclat",
     price: 450,
-    longevity: "8+ hours",
-    image: "/images/3.png",  // ✅
+    longevity: "مشاء الله جودة ممتازه وتعامل احلا واحلا💕",
+    image: "/images/3.jpg", // ✅
   },
   {
     id: 4,
     brand: "LE MALE ELIXIR",
     name: "Golden Velvet",
     price: 480,
-    longevity: "12+ hours",
-    image: "/images/4.png",  // ✅
+    longevity: "كواليتي متميز جدا مشاءالله😍",
+    image: "/images/4.jpg", // ✅
   },
   {
     id: 5,
     brand: "INITIO SIDE EFI",
     name: "Toxic Desire",
     price: 650,
-    longevity: "12+ hours",
-    image: "/images/5.png",  // ✅
+    longevity: "واو بجد منتج قمة في الجمال",
+    image: "/images/5.jpg", // ✅
   },
   {
     id: 6,
     brand: "CREED",
     name: "Imperial Leather",
     price: 550,
-    longevity: "10+ hours",
-    image: "/images/6.png",  // ✅
+    longevity: "مشاء الله عليكم باكديج وجودة المنتج تحفة",
+    image: "/images/6.jpg", // ✅
   },
   {
     id: 7,
     brand: "LOUIS VUITTON",
     name: "Black Amber Voyage",
     price: 850,
-    longevity: "12+ hours",
-    image: "/images/7.png",  // ✅
+    longevity: "معامله ممتازه وقمة في الاحترام وبرفان تحفة💕",
+    image: "/images/7.jpg", // ✅
   },
 ];
 
@@ -110,11 +110,10 @@ export default function Customers() {
   return (
     <section className="w-[90%] mx-auto py-10">
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold tracking-widest">Customers</h2>
-        <a href="/categories/men" className="text-sm text-gray-500 hover:text-black transition-colors">
-          View all
-        </a>
+      <div className=" mb-6 text-center">
+        <h1 className="text-4xl font-bold tracking-widest">
+          What Our Customers Say
+        </h1>
       </div>
 
       {/* Slider wrapper */}
@@ -134,11 +133,14 @@ export default function Customers() {
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
-          className="flex gap-4 overflow-x-auto pb-2 cursor-grab select-none"
+          className="flex gap-4 overflow-x-auto pb-2 cursor-grab select-none "
           style={{ scrollbarWidth: "none" }}
         >
           {products.map((product) => (
-            <div key={product.id} className="min-w-[280px] flex-shrink-0">
+            <div
+              key={product.id}
+              className="min-w-[400px] flex-shrink-0 shadow-xl p-5"
+            >
               {/* Image */}
               <div className="relative w-full aspect-square rounded-sm overflow-hidden bg-gray-100 group/card">
                 <Image
@@ -148,27 +150,26 @@ export default function Customers() {
                   className="object-cover transition-transform duration-500 group-hover/card:scale-105"
                   draggable={false}
                 />
-                <button className="absolute bottom-3 right-3 bg-white rounded-full p-2 opacity-0 group-hover/card:opacity-100 transition-opacity shadow">
+                {/* <button className="absolute bottom-3 right-3 bg-white rounded-full p-2 opacity-0 group-hover/card:opacity-100 transition-opacity shadow">
                   <ShoppingCart size={16} />
-                </button>
+                </button> */}
               </div>
 
               {/* Info */}
               <div className="mt-3 space-y-1">
-                <div className="flex items-center gap-1 text-gray-400 text-xs">
-                  <Clock size={12} />
-                  <span>Longevity {product.longevity}</span>
+                <div className="flex items-center gap-1 text-xs">
+                  <h1 className="text-2xl"> {product.longevity}</h1>
                 </div>
-                <p className="text-[11px] text-gray-400 uppercase tracking-wider">{product.brand}</p>
+                <p className="text-[11px] text-gray-400 uppercase tracking-wider">
+                  {product.brand}
+                </p>
                 <p className="text-base font-semibold">{product.name}</p>
-                <p className="text-sm text-gray-600">LE {product.price}.00 EGP</p>
+                <p className="text-sm text-gray-600">
+                  LE {product.price}.00 EGP
+                </p>
               </div>
 
               {/* Button */}
-              <button className="mt-3 w-full flex items-center justify-center gap-2 bg-[#1a1a1a] text-white text-sm py-3 hover:bg-black transition-colors">
-                <ShoppingCart size={16} />
-                FAST CHECKOUT
-              </button>
             </div>
           ))}
         </div>

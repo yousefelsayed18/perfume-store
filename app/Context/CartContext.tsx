@@ -11,7 +11,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const fetchCartCount = async () => {
     const cart = await getCart();
 
-    // 🔥 لو عايز تحسب الكمية مش عدد المنتجات
     const total = cart.reduce(
       (acc: number, item: any) => acc + item.quantity,
       0

@@ -63,7 +63,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="text-center">
-          <h1 className="font-bold tracking-widest">ELDORA</h1>
+          <h1 className="font-bold tracking-widest text-2xl">Store</h1>
           <p className="text-xs text-gray-400">Fine Jewellery · Treasured Gifts</p>
         </Link>
 
@@ -85,7 +85,7 @@ export default function Navbar() {
             )}
           </button>
 
-          <ShareIcon className="cursor-pointer" />
+          
 
           <button onClick={() => router.push("/cart")} className="relative cursor-pointer">
             🛒

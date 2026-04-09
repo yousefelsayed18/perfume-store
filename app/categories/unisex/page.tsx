@@ -29,9 +29,7 @@ export default async function Unisix() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover/card:scale-105"
                 />
-                <button className="absolute bottom-3 right-3 bg-white rounded-full p-2 opacity-0 group-hover/card:opacity-100 transition-opacity shadow">
-                  <ShoppingCart size={16} />
-                </button>
+         
               </div>
 
               {/* Info */}

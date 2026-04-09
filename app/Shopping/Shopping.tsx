@@ -5,15 +5,15 @@ import React from "react";
 export default function Shopping() {
   const categories = [
     
-    { name: "MEN", image: "/images/men.png", href: "/categories/men" },
+    { name: "MEN", image: "/images/men-p.webp", href: "/categories/men" },
     {
       name: "WOMEN",
-      image: "/images/category_women.png",
+      image: "/images/women.webp",
       href: "/categories/women",
     },
     {
       name: "UNISEX",
-      image: "/images/category_unisex.png",
+      image: "/images/unisex.jpg",
       href: "/categories/unisex",
     },
   ];

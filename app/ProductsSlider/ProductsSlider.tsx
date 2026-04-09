@@ -8,8 +8,10 @@ import { Perfume } from "@/app/types";
 import { addToCart } from "../services/services";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useCart } from "../Context/CartContext";
 
 export default function ProductsSlider() {
+   const { fetchCartCount } = useCart();
   const sliderRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   const startX = useRef(0);
@@ -80,6 +82,7 @@ export default function ProductsSlider() {
     const { error } = await addToCart(product.id);
     if (!error) {
       setAddedId(product.id);
+       await fetchCartCount();
       setTimeout(() => setAddedId(null), 2000);
     } else {
       alert("❌ Something went wrong");
